@@ -1,0 +1,10 @@
+{
+    "name": "pinata-sdk-node-example",
+    "scripts": {
+        "start": "node pinHashToIPFS.js"
+    },
+    "dependencies": {
+        "node-fetch": "^2.3.0",
+        "pinata-sdk": "file:../../"
+    }
+}

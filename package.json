@@ -1,0 +1,32 @@
+{
+  "name": "pinata-sdk",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "main": "lib/js/src/Pinata.bs.js",
+  "keywords": [
+    "BuckleScript",
+    "ReasonML",
+    "Pinata",
+    "IPFS"
+  ],
+  "author": "matej.sima@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.6",
+    "bs-platform": "^4.0.18",
+    "jest": "^23.6.0",
+    "jest-fetch-mock": "^2.1.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {
+    "@glennsl/bs-json": "^3.0.0",
+    "bs-fetch": "^0.3.1",
+    "node-fetch": "^2.3.0"
+  }
+}

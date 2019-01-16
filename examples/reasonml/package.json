@@ -1,0 +1,20 @@
+{
+  "name": "reasonml",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world -w",
+    "start": "node lib/js/src/pinHashToIPFS.bs.js",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pinata-sdk": "file:../../"
+  },
+  "devDependencies": {
+    "bs-platform": "^4.0.18"
+  }
+}
