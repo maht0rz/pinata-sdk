@@ -28,5 +28,9 @@
     "@glennsl/bs-json": "^3.0.0",
     "bs-fetch": "^0.3.1",
     "node-fetch": "^2.3.0"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/maht0rz/pinata-sdk"
   }
 }
