@@ -11,7 +11,23 @@
 
 Unofficial SDK for [Pinata](https://pinata.cloud), implemented in ReasonML and compiled to Javascript
 
+## Installing
+
+Install the package - it includes both the javascript & reason versions.
+```
+npm i --save pinata-sdk
+```
+
+Add this to your `bsconfig.json`:
+```javascript
+  "bs-dependencies": [
+    "pinata-sdk"  
+  ],
+```
+
 ## Usage 👩‍💻
+
+> ⚠️ For usage with Node.js, make sure to include the `node-fetch` polyfill. 
 
 ### Javascript
 
@@ -37,6 +53,8 @@ Pinata.pinHashToIPFS(
 ### ReasonML
 
 ```ocaml
+open PinataSdk;
+
 let hash = "<your ipfs content hash>";
 let apiKey = "<your api key>";
 let privateApiKey = "<your private api key>";
@@ -52,7 +70,6 @@ pinata
       Js.log("Content pinned successfully" ++ result->ipfsHashGet)
       Js.Promise.resolve(result);
     })
-
 ```
 
 ## API
