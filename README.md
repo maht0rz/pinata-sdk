@@ -1,5 +1,7 @@
 # Pinata SDK 
 
+Unofficial SDK for [Pinata](https://pinata.cloud), implemented in ReasonML and compiled to Javascript
+
 <div float="left">
   <img src="https://cdn-images-1.medium.com/max/1200/1*BTGStLRXsQUbkp0t-oxJhQ.png" width="100" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ipfs-logo-1024-ice-text.png/220px-Ipfs-logo-1024-ice-text.png" width="100" />
@@ -8,8 +10,6 @@
   
 </div>
 <br/>
-
-Unofficial SDK for [Pinata](https://pinata.cloud), implemented in ReasonML and compiled to Javascript
 
 ## Installing
 
@@ -54,6 +54,7 @@ Pinata.pinHashToIPFS(
 
 ```ocaml
 open PinataSdk;
+open PinataSdk.PinHashToIPFS;
 
 let hash = "<your ipfs content hash>";
 let apiKey = "<your api key>";

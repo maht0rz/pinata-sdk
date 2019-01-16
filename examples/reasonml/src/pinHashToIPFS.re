@@ -1,4 +1,5 @@
 open PinataSdk;
+open PinataSdk.PinHashToIPFS;
 
 [%bs.raw {| 
     global.fetch = require('node-fetch')
@@ -15,7 +16,6 @@ let pinata = Pinata.configure(
 pinata
   -> Pinata.pinHashToIPFS(~hash = hash)
     |> Js.Promise.then_(result => {
-      /* @TODO: fix result->ipfsHashGet doesn't compile */
-      Js.log(result)
+      Js.log(result->ipfsHashGet)
       Js.Promise.resolve(result);
     })

@@ -16,7 +16,7 @@ var privateApiKey = "<your private api key>";
 var pinata = Pinata$PinataSdk.configure(apiKey, privateApiKey, undefined, /* () */0);
 
 Pinata$PinataSdk.pinHashToIPFS(pinata, hash).then((function (result) {
-        console.log(result);
+        console.log(result.ipfsHash);
         return Promise.resolve(result);
       }));
 
