@@ -73,9 +73,18 @@ pinata
     })
 ```
 
-## API
+## API 🕹
 
-#### 
+##### configure (~apiKey: string, ~privateApiKey: string, ~apiURL: string = apiURL): pinataConfig
+
+- `apiKey` your api key from pinata
+- `privateApiKey` your private api key from pinata
+- `apiURL` optional, default value `https://api.pinata.cloud`
+
+##### pinHashToIPFS (config: pinataConfig, ~hash: ipfsHash): Promise.t(pinHashToIPFSResponseJS)
+
+- `config` SDK configuration created via `configure()`
+- `hash` IPFS content hash to be pinned
 
 ## Examples 🤓
 
