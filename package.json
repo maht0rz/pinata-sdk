@@ -1,6 +1,6 @@
 {
   "name": "pinata-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -30,7 +30,7 @@
     "node-fetch": "^2.3.0"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/maht0rz/pinata-sdk"
+    "type": "git",
+    "url": "https://github.com/maht0rz/pinata-sdk"
   }
 }
