@@ -1,0 +1,14 @@
+{
+    "name": "pinata-sdk-node-example",
+    "scripts": {
+        "start": "ts-node pinHashToIPFS.ts"
+    },
+    "dependencies": {
+        "node-fetch": "^2.3.0",
+        "pinata-sdk": "file:../../"
+    },
+    "devDependencies": {
+        "ts-node": "^7.0.1",
+        "typescript": "^3.2.2"
+    }
+}

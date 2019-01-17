@@ -7,6 +7,7 @@ Unofficial SDK for [Pinata](https://pinata.cloud), implemented in ReasonML and c
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ipfs-logo-1024-ice-text.png/220px-Ipfs-logo-1024-ice-text.png" width="100" />
   <img src="https://cdn-images-1.medium.com/max/1050/1*rFOtAIWjbeAyNNFcW029bQ.png" width="100" /> 
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="100" /> 
+  <img src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="100" /> 
   
 </div>
 <br/>
@@ -18,7 +19,7 @@ Install the package - it includes both the javascript & reason versions.
 npm i --save pinata-sdk
 ```
 
-Add this to your `bsconfig.json`:
+If you're using ReasonML, add this to your `bsconfig.json`:
 ```javascript
   "bs-dependencies": [
     "pinata-sdk"  
@@ -26,29 +27,9 @@ Add this to your `bsconfig.json`:
 ```
 
 ## Usage 👩‍💻
+*Available for* `ReasonML` `TypeScript` `Javascript`
 
 > ⚠️ For usage with Node.js, make sure to include the `node-fetch` polyfill. 
-
-### Javascript
-
-```javascript
-var Pinata = require('pinata-sdk');
-
-var apiKey = "<your api key>";
-var privateApiKey = "<your private api>";
-
-var hash = "<your ipfs content hash>";
-
-var pinata = Pinata.configure(apiKey, privateApiKey);
-
-Pinata.pinHashToIPFS(
-    pinata,
-    hash
-)
-    .then((result) => {
-        console.log("Content pinned successfully", result.ipfsHash);
-    })
-```
 
 ### ReasonML
 
@@ -70,6 +51,53 @@ pinata
     |> then_(result => {
       Js.log("Content pinned successfully" ++ result->ipfsHashGet)
       Js.Promise.resolve(result);
+    })
+```
+
+### TypeScript
+
+```typescript
+import * as Pinata from 'pinata-sdk';
+
+// api key pair for Pinata
+const apiKey = "<your api key>";
+const privateApiKey = "<your private api key>";
+
+// ipfs hash of our content
+const hash = "<your ipfs content hash>";
+
+const pinata: Pinata.PinataConfig = Pinata.configure(apiKey, privateApiKey);
+
+Pinata.pinHashToIPFS(
+    pinata,
+    hash
+)
+    .then((result: Pinata.PinHashToIPFSResponseJS) => {
+        console.log("Content pinned successfully", result.ipfsHash);
+    })
+    .catch(() => {
+        console.error("Content was not pinned");
+    });
+```
+
+### Javascript
+
+```javascript
+var Pinata = require('pinata-sdk');
+
+var apiKey = "<your api key>";
+var privateApiKey = "<your private api>";
+
+var hash = "<your ipfs content hash>";
+
+var pinata = Pinata.configure(apiKey, privateApiKey);
+
+Pinata.pinHashToIPFS(
+    pinata,
+    hash
+)
+    .then((result) => {
+        console.log("Content pinned successfully", result.ipfsHash);
     })
 ```
 

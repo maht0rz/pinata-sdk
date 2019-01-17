@@ -8,3 +8,4 @@ npm-debug.log
 .vscode
 /examples/node/node_modules
 /examples/reasonml/node_modules
+/examples/typescript-node/node_modules
