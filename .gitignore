@@ -9,3 +9,7 @@ npm-debug.log
 /examples/node/node_modules
 /examples/reasonml/node_modules
 /examples/typescript-node/node_modules
+/examples/deployment-dapp-frontend/node_modules
+/examples/deployment-dapp-frontend/my-react-app/node_modules
+/examples/deployment-dapp-frontend/my-react-app/build
+/examples/deployment-dapp-frontend/my-react-app/lib

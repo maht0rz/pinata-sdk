@@ -124,6 +124,8 @@ Make sure to:
 
 Each example can be run using `npm start`. E.g.: `cd examples/node && npm start`
 
+Some examples might contain additional `README.md` to help you understand the details.
+
 ## Contributing 🔧
 
 PinataSDK is developed & built trough docker, to start contributing, you'll have to [setup docker](https://www.docker.com) for your platform first first. 
