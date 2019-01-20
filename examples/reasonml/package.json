@@ -2,8 +2,8 @@
   "name": "reasonml",
   "version": "0.1.0",
   "scripts": {
-    "build": "bsb -make-world -w",
-    "start": "node lib/js/src/pinHashToIPFS.bs.js",
+    "build": "bsb -make-world",
+    "start": "npm run build && node src/pinHashToIPFS.bs.js",
     "clean": "bsb -clean-world"
   },
   "keywords": [

@@ -1,26 +1,27 @@
 // Fetch polyfill is necessary for node.js
 fetch = require('node-fetch');
-var Pinata = require('pinata-sdk');
-
-// api key pair for Pinata
-var apiKey = "<your api key>";
-var privateApiKey = "<your private api key>";
+const Pinata = require('pinata-sdk');
+const apiCredentials = require('./credentials');
 
 // ipfs hash of our content
-var hash = "<your ipfs content hash>";
-
+const hash = "<your ipfs content hash>";
 // configure pinata
-var pinata = Pinata.configure(apiKey, privateApiKey);
+const pinata = Pinata.configure(
+    apiCredentials.apiKey, 
+    apiCredentials.privateApiKey
+);
 
-// pin our content hash to ipfs using previously created config
-Pinata.pinHashToIPFS(
-    pinata,
-    hash
-)
-    // result is the response from pinata api
-    .then((result) => {
+(async () => {
+    // pin our content hash to ipfs using previously created config
+    try {
+        const result = await Pinata.pinHashToIPFS(
+            pinata,
+            hash
+        );
+        
+        // result is the response from pinata api
         console.log("Content pinned successfully", result.ipfsHash);
-    })
-    .catch((result) => {
-        console.error("Content was not pinned");
-    })
+    } catch (err) {
+        console.error("Content was not pinned", err);
+    }
+})();

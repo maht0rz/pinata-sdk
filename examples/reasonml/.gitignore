@@ -4,3 +4,6 @@
 npm-debug.log
 /lib/bs/
 /node_modules/
+/lib
+.vscode
+/src/*.bs.js
